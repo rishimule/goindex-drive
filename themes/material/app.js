@@ -302,6 +302,7 @@ function file_video(path){
 	window.player = player;
 }
 
+
 // file display music |mp3|m4a|wav|ogg|
 function file_audio(path){
 	var url = window.location.origin + path;
