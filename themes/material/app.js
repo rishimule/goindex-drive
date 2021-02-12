@@ -280,12 +280,9 @@ function file_video(path){
 	  <ul class="mdui-menu" id="external-player">`;
 	if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
 		playBtn += `
-		// <li class="mdui-menu-item"><a href="intent:${url}#Intent;package=com.mxtech.videoplayer.ad;S.title=${path};end" class="mdui-ripple">MX Player</a></li>
-		// <li class="mdui-menu-item"><a href="intent:${url}#Intent;package=com.mxtech.videoplayer.pro;S.title=${path};end" class="mdui-ripple">MX Player Pro</a></li>
 		<li class="mdui-menu-item"><a href="vlc://${url}" class="mdui-ripple">VLC</a></li>`;
 	}else{
 		playBtn += `
-		// <li class="mdui-menu-item"><a href="potplayer://${url}" class="mdui-ripple">PotPlayer</a></li>
 		<li class="mdui-menu-item"><a href="vlc://${url}" class="mdui-ripple">VLC</a></li>`;
 	}
 	playBtn += `</ul>`;
@@ -297,14 +294,6 @@ function file_video(path){
 	</video>
 	<br>${playBtn}
 	<!-Fixed label->
-	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">download link</label>
-	  // <input class="mdui-textfield-input" type="text" value="${url}"/>
-	</div>
-	<div class="mdui-textfield">
-	  // <label class="mdui-textfield-label">HTML reference</label>
-	  // <textarea class="mdui-textfield-input"><video><source src="${url}" type="video/mp4"></video></textarea>
-	</div>
 </div>
 <a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
