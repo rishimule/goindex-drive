@@ -274,15 +274,25 @@ function file_code(path){
 
 // file display video |mp4|webm|avi|
 function file_video(path){
-	var url = window.location.origin + path;
-  var arr = url.trim('/').split('/');
+  var url = window.location.origin + path;
+  var name = path.split('/').pop();
+  var arr = path.trim('/').split('/');
   var p = '/';
-  var filenames = arr[-1];
-  filenames = decodeURI(filenames);
+  if (arr.length > 0) {
+    for (i in arr) {
+      break;
+      var n = arr[i];
+      n = decodeURI(n);
+      p += n + '/';
+      if (n == '') {
+        break;
+      }
+    }
+  }
 
 	var playBtn = `
       <div class="container" align="center">
-      <h1>${filenames}</h1>
+      <h1>${name}</h1>
 
       </div>
       <button class="mdui-btn mdui-ripple mdui-color-theme-accent" mdui-menu="{target:'#external-player'}">
