@@ -55,6 +55,7 @@ function nav(path) {
 	var p = '/';
 	if (arr.length > 0) {
 		for (i in arr) {
+      break;
 			var n = arr[i];
 			n = decodeURI(n);
 			p += n + '/';
@@ -62,7 +63,7 @@ function nav(path) {
 				break;
 			}
 			html += `<i class="mdui-icon material-icons mdui-icon-dark folder" style="margin:0;">chevron_right</i><a class="folder" href="${p}">${n}</a>`;
-      break;
+
 		}
 	}
 	html += `<div class="mdui-toolbar-spacer"></div>
