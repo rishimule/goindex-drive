@@ -275,10 +275,10 @@ function file_code(path){
 // file display video |mp4|webm|avi|
 function file_video(path){
 	var url = window.location.origin + path;
-  var arr = path.trim('/').split('/');
+  var arr = url.trim('/').split('/');
   var p = '/';
   if (arr.length > 0) {
-    var filenames=arr[-1];
+    var filenames = string(arr[-1]);
     // for (i in arr) {
     //   break;
     //   var n = arr[i];
