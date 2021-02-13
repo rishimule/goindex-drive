@@ -291,10 +291,6 @@ function file_video(path){
   }
 
 	var playBtn = `
-      <div class="container" align="center">
-      <h1>${name}</h1>
-
-      </div>
       <button class="mdui-btn mdui-ripple mdui-color-theme-accent" mdui-menu="{target:'#external-player'}">
         <i class="mdui-icon material-icons">&#xe039;</i> Play in External Player
 	  </button>
@@ -310,6 +306,8 @@ function file_video(path){
 	var content = `
 <div class="mdui-container-fluid">
 	<br>
+  <h3>${name}</h3>
+  <br>
 	<video id="player" class="mdui-video-fluid mdui-center" preload controls>
 	  <source src="${url}" type="video/mp4">
 	</video>
