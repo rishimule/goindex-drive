@@ -277,19 +277,8 @@ function file_video(path){
 	var url = window.location.origin + path;
   var arr = url.trim('/').split('/');
   var p = '/';
-  if (arr.length > 0) {
-    var filenames = string(arr[-1]);
-    // for (i in arr) {
-    //   break;
-    //   var n = arr[i];
-    //   n = decodeURI(n);
-    //   p += n + '/';
-    //   if (n == '') {
-    //     break;
-    //   }
-    //   html += `<i class="mdui-icon material-icons mdui-icon-dark folder" style="margin:0;">chevron_right</i><a class="folder" href="${p}">${n}</a>`;
-    //
-    }
+  var filenames = string(arr[-1]);
+  
 	var playBtn = `
       <div class="container" align="center">
       <h1>${filenames}</h1>
