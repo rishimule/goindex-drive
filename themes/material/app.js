@@ -277,8 +277,9 @@ function file_video(path){
 	var url = window.location.origin + path;
   var arr = url.trim('/').split('/');
   var p = '/';
-  var filenames = string(arr[-1]);
-  
+  var filenames = arr[-1];
+  filenames = decodeURI(filenames);
+
 	var playBtn = `
       <div class="container" align="center">
       <h1>${filenames}</h1>
