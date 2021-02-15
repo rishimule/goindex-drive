@@ -147,7 +147,8 @@ function list_files(path,files){
 	            </a>
 	        </li>`;
         }else{
-            var p = path+item.name;
+            var dasv = path+item.name;
+            var p = encodeURI(dasv);
             var c = "file";
             if(item.name == "README.md"){
                  get_file(p, item, function(data){
@@ -236,6 +237,7 @@ function file_code(path){
 	var name = path.split('/').pop();
 	var ext = name.split('.').pop();
 	var href = window.location.origin + path;
+  var dashurl = encodeURI(href);
 	var content = `
 <div class="mdui-container">
 <pre id="editor" ></pre>
@@ -244,7 +246,7 @@ function file_code(path){
 	<label class="mdui-textfield-label">Download link</label>
 	<input class="mdui-textfield-input" type="text" value="${href}"/>
 </div>
-<a href="${href}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+<a href="${dashurl}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 
 <script src="https://cdn.staticfile.org/ace/1.4.7/ace.js"></script>
 <script src="https://cdn.staticfile.org/ace/1.4.7/ext-language_tools.js"></script>
@@ -315,7 +317,7 @@ function file_video(path){
 	<br>${playBtn}
 	<!-Fixed label->
 </div>
-<a href="intent://${dashurl}#Intent;scheme=http;package=com.android.chrome;end" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+<a href="${dashurl}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
 	$('#content').html(content);
 	const player = new Plyr('#player');
@@ -326,6 +328,7 @@ function file_video(path){
 // file display music |mp3|m4a|wav|ogg|
 function file_audio(path){
 	var url = window.location.origin + path;
+  var dashurl = encodeURI(url);
 	var content = `
 <div class="mdui-container-fluid">
 	<br>
@@ -336,14 +339,14 @@ function file_audio(path){
 	<!-Fixed label->
 	<div class="mdui-textfield">
 	  <label class="mdui-textfield-label">Download link</label>
-	  <input class="mdui-textfield-input" type="text" value="${url}"/>
+	  <input class="mdui-textfield-input" type="text" value="${dashurl}"/>
 	</div>
 	<div class="mdui-textfield">
 	  <label class="mdui-textfield-label">HTML reference</label>
 	  <textarea class="mdui-textfield-input"><audio><source src="${url}"></audio></textarea>
 	</div>
 </div>
-<a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+<a href="${dashurl}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
 	$('#content').html(content);
 }
@@ -352,26 +355,27 @@ function file_audio(path){
 // picture display
 function file_image(path){
 	var url = window.location.origin + path;
+  var dashurl = encodeURI(url);
 	var content = `
 <div class="mdui-container-fluid">
 	<br>
-	<img class="mdui-img-fluid" src="${url}"/>
+	<img class="mdui-img-fluid" src="${dashurl}"/>
 	<br>
 	<div class="mdui-textfield">
 	  <label class="mdui-textfield-label">Download link</label>
-	  <input class="mdui-textfield-input" type="text" value="${url}"/>
+	  <input class="mdui-textfield-input" type="text" value="${dashurl}"/>
 	</div>
 	<div class="mdui-textfield">
 	  <label class="mdui-textfield-label">HTML references</label>
-	  <input class="mdui-textfield-input" type="text" value="<img src='${url}' />"/>
+	  <input class="mdui-textfield-input" type="text" value="<img src='${dashurl}' />"/>
 	</div>
         <div class="mdui-textfield">
 	  <label class="mdui-textfield-label">Markdown Reference</label>
-	  <input class="mdui-textfield-input" type="text" value="![](${url})"/>
+	  <input class="mdui-textfield-input" type="text" value="![](${dashurl})"/>
 	</div>
         <br>
 </div>
-<a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+<a href="${dashurl}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
 	$('#content').html(content);
 }
