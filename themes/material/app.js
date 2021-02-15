@@ -55,7 +55,9 @@ function nav(path) {
 	var p = '/';
 	if (arr.length > 0) {
 		for (i in arr) {
-      break;
+      if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)){
+        break;
+      }
 			var n = arr[i];
 			n = decodeURI(n);
 			p += n + '/';
