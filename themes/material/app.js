@@ -275,6 +275,7 @@ function file_code(path){
 // file display video |mp4|webm|avi|
 function file_video(path){
   var url = window.location.origin + path;
+  var dashurl = encodeURI(url);
   var name = path.split('/').pop();
   var arr = path.trim('/').split('/');
   var p = '/';
@@ -297,10 +298,10 @@ function file_video(path){
 	  <ul class="mdui-menu" id="external-player">`;
 	if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
 		playBtn += `
-		<li class="mdui-menu-item"><a href="vlc://${url}" class="mdui-ripple">VLC</a></li>`;
+		<li class="mdui-menu-item"><a href="vlc://${dashurl}" class="mdui-ripple">VLC</a></li>`;
 	}else{
 		playBtn += `
-		<li class="mdui-menu-item"><a href="vlc://${url}" class="mdui-ripple">VLC</a></li>`;
+		<li class="mdui-menu-item"><a href="vlc://${dashurl}" class="mdui-ripple">VLC</a></li>`;
 	}
 	playBtn += `</ul>`;
 	var content = `
@@ -314,7 +315,7 @@ function file_video(path){
 	<br>${playBtn}
 	<!-Fixed label->
 </div>
-<a href="googlechromes://${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+<a href="intent://${dashurl}#Intent;scheme=http;package=com.android.chrome;end" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
 	$('#content').html(content);
 	const player = new Plyr('#player');
