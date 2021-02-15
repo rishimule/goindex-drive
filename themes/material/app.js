@@ -147,8 +147,7 @@ function list_files(path,files){
 	            </a>
 	        </li>`;
         }else{
-            var dasv = path+item.name;
-            var p = encodeURI(dasv);
+            var p = path+item.name;
             var c = "file";
             if(item.name == "README.md"){
                  get_file(p, item, function(data){
