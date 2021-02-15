@@ -137,7 +137,8 @@ function list_files(path,files){
         item['modifiedTime'] = utc2jakarta(item['modifiedTime']);
         item['size'] = formatFileSize(item['size']);
         if(item['mimeType'] == 'application/vnd.google-apps.folder'){
-            html +=`<li class="mdui-list-item mdui-ripple"><a href="${p}" class="folder">
+            var asgs = encodeURI(p)
+            html +=`<li class="mdui-list-item mdui-ripple"><a href="${asgs}" class="folder">
 	            <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate">
 	            <i class="mdui-icon material-icons">folder_open</i>
 	              ${item.name}
@@ -317,7 +318,7 @@ function file_video(path){
 	<br>${playBtn}
 	<!-Fixed label->
 </div>
-<a href="intent://${dashurl}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+<a href="${dashurl}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
 	$('#content').html(content);
 	const player = new Plyr('#player');
