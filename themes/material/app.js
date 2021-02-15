@@ -166,6 +166,8 @@ function list_files(path,files){
             }
             if (c=="file") {
               var paurl = encodeURI(p);
+            }else {
+              var paurl = p;
             }
             html += `<li class="mdui-list-item file mdui-ripple" target="_blank"><a gd-type="${item.mimeType}" href="${paurl}" class="${c}">
 	          <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate">
