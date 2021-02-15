@@ -321,7 +321,7 @@ function file_video(path){
 	<br>${playBtn}
 	<!-Fixed label->
 </div>
-<a href="${dashurl}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+<a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
 	$('#content').html(content);
 	const player = new Plyr('#player');
@@ -363,7 +363,7 @@ function file_image(path){
 	var content = `
 <div class="mdui-container-fluid">
 	<br>
-	<img class="mdui-img-fluid" src="${dashurl}"/>
+	<img class="mdui-img-fluid" src="${url}"/>
 	<br>
 	<div class="mdui-textfield">
 	  <label class="mdui-textfield-label">Download link</label>
