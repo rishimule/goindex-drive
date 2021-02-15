@@ -137,8 +137,7 @@ function list_files(path,files){
         item['modifiedTime'] = utc2jakarta(item['modifiedTime']);
         item['size'] = formatFileSize(item['size']);
         if(item['mimeType'] == 'application/vnd.google-apps.folder'){
-            var asgs = encodeURI(p)
-            html +=`<li class="mdui-list-item mdui-ripple"><a href="${asgs}" class="folder">
+            html +=`<li class="mdui-list-item mdui-ripple"><a href="${p}" class="folder">
 	            <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate">
 	            <i class="mdui-icon material-icons">folder_open</i>
 	              ${item.name}
@@ -165,7 +164,9 @@ function list_files(path,files){
 	            p += "?a=view";
 	            c += " view";
             }
-            var paurl = encodeURI(p)
+            if (c=="file") {
+              var paurl = encodeURI(p);
+            }
             html += `<li class="mdui-list-item file mdui-ripple" target="_blank"><a gd-type="${item.mimeType}" href="${paurl}" class="${c}">
 	          <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate">
 	          <i class="mdui-icon material-icons">insert_drive_file</i>
