@@ -280,9 +280,9 @@ function file_code(path){
 // file display video |mp4|webm|avi|
 function file_video(path){
   var url = window.location.origin + path;
-  var dashurl = encodeURI(url);
   var name = path.split('/').pop();
   var arr = path.trim('/').split('/');
+  var dashurl = encodeURI(url);
   var p = '/';
   if (arr.length > 0) {
     for (i in arr) {
@@ -302,11 +302,14 @@ function file_video(path){
 	  </button>
 	  <ul class="mdui-menu" id="external-player">`;
 	if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
+    var tempurl = decodeURI(url)
+    tempurl = decodeURI(tempurl)
+    var newdashurl = encodeURI(tempurl);
 		playBtn += `
-		<li class="mdui-menu-item"><a href="vlc://${url}" class="mdui-ripple">VLC</a></li>`;
+		<li class="mdui-menu-item"><a href="vlc://${newdashurl}" class="mdui-ripple">VLC</a></li>`;
 	}else{
 		playBtn += `
-		<li class="mdui-menu-item"><a href="vlc://${url}" class="mdui-ripple">VLC</a></li>`;
+		<li class="mdui-menu-item"><a href="vlc://${newdashurl}" class="mdui-ripple">VLC</a></li>`;
 	}
 	playBtn += `</ul>`;
 	var content = `
