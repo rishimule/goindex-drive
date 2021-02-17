@@ -387,9 +387,11 @@ function file_image(path){
 	var url = window.location.origin + path;
   var dashurl = encodeURI(url);
 	var content = `
-<div class="mdui-container-fluid" align="center">
+<div class="mdui-container-fluid">
 	<br>
+  <div align="center">
 	<img class="mdui-img-fluid" src="${url}"/>
+  </div>
 	<br>
 	<div class="mdui-textfield">
 	  <label class="mdui-textfield-label">Download link</label>
