@@ -156,7 +156,7 @@ function list_files(path,files){
             if("|html|php|css|go|java|js|json|sh|md|c|cpp|java|".indexOf(`|${extenckeck}|`) >= 0){
               fileicons = "code";
             }
-            if("|mp4|webm|avi|m4a|mp3|wav|ogg|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|ts|flv|".indexOf(`|${extenckeck}|`) >= 0){
+            if("|mp4|webm|avi|m4a|m4v|mp3|wav|ogg|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|ts|flv|".indexOf(`|${extenckeck}|`) >= 0){
               fileicons = "play_circle_filled";
             }
             if("|bmp|jpg|jpeg|png|gif|".indexOf(`|${extenckeck}|`) >= 0){
