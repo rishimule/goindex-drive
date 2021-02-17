@@ -163,7 +163,7 @@ function list_files(path,files){
               fileicons = "photo_camera";
             }
             if("|vtt|srt|".indexOf(`|${extenckeck}|`) >= 0){
-              fileicons = "closed_caption_off";
+              fileicons = "closed_caption";
             }
 
             var c = "file";
