@@ -168,6 +168,9 @@ function list_files(path,files){
             if("|zip|rar|tar|7z|".indexOf(`|${extenckeck}|`) >= 0){
               fileicons = "archive";
             }
+            if("|pdf|".indexOf(`|${extenckeck}|`) >= 0){
+              fileicons = "picture_as_pdf";
+            }
 
             var c = "file";
             if(item.name == "README.md"){
