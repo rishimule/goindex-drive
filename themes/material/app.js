@@ -150,6 +150,19 @@ function list_files(path,files){
 	        </li>`;
         }else{
             var p = path+item.name;
+            var extenckeck = item.name.split('.').pop();
+            var fileicons = "insert_drive_file";
+
+            if("|html|php|css|go|java|js|json|txt|sh|md|".indexOf(`|${extenckeck}|`) >= 0){
+              fileicons = "developer_mode";
+            }
+            if("|mp4|webm|avi|m4a|mp3|wav|ogg|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|ts|flv|".indexOf(`|${extenckeck}|`) >= 0){
+              fileicons = "movie";
+            }
+            if("|bmp|jpg|jpeg|png|gif|".indexOf(`|${extenckeck}|`) >= 0){
+              fileicons = "photo_camera";
+            }
+
             var c = "file";
             if(item.name == "README.md"){
                  get_file(p, item, function(data){
@@ -173,7 +186,7 @@ function list_files(path,files){
             }
             html += `<li class="mdui-list-item file mdui-ripple" target="_blank"><a gd-type="${item.mimeType}" href="${p}" class="${c}">
 	          <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate">
-	          <i class="mdui-icon material-icons">insert_drive_file</i>
+	          <i class="mdui-icon material-icons">${fileicons}</i>
 	            ${item.name}
 	          </div>
 	          <div class="mdui-col-sm-3 mdui-text-right">${item['modifiedTime']}</div>
