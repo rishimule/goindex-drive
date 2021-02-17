@@ -387,7 +387,7 @@ function file_image(path){
 	var url = window.location.origin + path;
   var dashurl = encodeURI(url);
 	var content = `
-<div class="mdui-container-fluid">
+<div class="mdui-container-fluid" align="center">
 	<br>
 	<img class="mdui-img-fluid" src="${url}"/>
 	<br>
