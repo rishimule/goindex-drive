@@ -157,13 +157,16 @@ function list_files(path,files){
               fileicons = "code";
             }
             if("|mp4|webm|avi|m4a|mp3|wav|ogg|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|ts|flv|".indexOf(`|${extenckeck}|`) >= 0){
-              fileicons = "movie";
+              fileicons = "play_circle_filled";
             }
             if("|bmp|jpg|jpeg|png|gif|".indexOf(`|${extenckeck}|`) >= 0){
               fileicons = "photo_camera";
             }
             if("|vtt|srt|".indexOf(`|${extenckeck}|`) >= 0){
               fileicons = "closed_caption";
+            }
+            if("|zip|rar|tar|7z|".indexOf(`|${extenckeck}|`) >= 0){
+              fileicons = "archive";
             }
 
             var c = "file";
