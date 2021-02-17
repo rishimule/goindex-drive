@@ -153,7 +153,7 @@ function list_files(path,files){
             var extenckeck = item.name.split('.').pop();
             var fileicons = "insert_drive_file";
 
-            if("|html|php|css|go|java|js|json|txt|sh|md|c|cpp|java|".indexOf(`|${extenckeck}|`) >= 0){
+            if("|html|php|css|go|java|js|json|sh|md|c|cpp|java|".indexOf(`|${extenckeck}|`) >= 0){
               fileicons = "code";
             }
             if("|mp4|webm|avi|m4a|mp3|wav|ogg|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|ts|flv|".indexOf(`|${extenckeck}|`) >= 0){
@@ -170,6 +170,9 @@ function list_files(path,files){
             }
             if("|pdf|".indexOf(`|${extenckeck}|`) >= 0){
               fileicons = "picture_as_pdf";
+            }
+            if("|txt|".indexOf(`|${extenckeck}|`) >= 0){
+              fileicons = "format_align_center";
             }
 
             var c = "file";
