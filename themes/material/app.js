@@ -187,7 +187,7 @@ function list_files(path,files){
                 });
             }
             var ext = p.split('.').pop();
-            if("|html|php|css|go|java|js|json|txt|sh|md|mp4|webm|avi|bmp|jpg|jpeg|png|gif|m4a|mp3|wav|ogg|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|ts|flv|".indexOf(`|${ext}|`) >= 0){
+            if("|html|php|css|go|java|js|json|txt|sh|md|mp4|webm|avi|bmp|jpg|jpeg|png|pdf|gif|m4a|mp3|wav|ogg|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|ts|flv|".indexOf(`|${ext}|`) >= 0){
 	            p += "?a=view";
 	            c += " view";
             }
@@ -248,6 +248,10 @@ function file(path){
 
 	if("|bmp|jpg|jpeg|png|gif|".indexOf(`|${ext}|`) >= 0){
 		return file_image(path);
+	}
+
+  if("|pdf|".indexOf(`|${ext}|`) >= 0){
+		return file_pdf(path);
 	}
 }
 
@@ -358,6 +362,26 @@ function file_video(path){
 	window.player = player;
 }
 
+// file display Documents |pdf|
+function file_pdf(path){
+  var url = window.location.origin + path;
+  var dashurl = encodeURI(url);
+  var content = `
+<div class="mdui-container-fluid">
+	<br>
+  <iframe src="${url}" width="100%" height="800px">
+      </iframe>
+	<br>
+	<!-Fixed label->
+	<div class="mdui-textfield">
+	  <label class="mdui-textfield-label">Download link</label>
+	  <input class="mdui-textfield-input" type="text" value="${dashurl}"/>
+	</div>
+</div>
+<a href="${dashurl}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+	`;
+	$('#content').html(content);
+}
 
 // file display music |mp3|m4a|wav|ogg|
 function file_audio(path){
