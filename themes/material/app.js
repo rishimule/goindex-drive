@@ -373,9 +373,15 @@ function file_pdf(path){
 	<br>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js" integrity="sha512-g4FwCPWM/fZB1Eie86ZwKjOP+yBIxSBM/b2gQAiSVqCgkyvZ0XxYPDEcN2qqaKKEvK6a05+IPL1raO96RrhYDQ==" crossorigin="anonymous"></script>
 
-  <div>
-  <embed src="${dashurl}" type="application/pdf" width="100%" height="600px" />
-
+  <div class="container">
+  <object
+  data="https://example.com/test.pdf#page=2"
+  type="application/pdf"
+  width="100%"
+  height="100%">
+  <p>Your browser does not support PDFs.
+    <a href="https://example.com/test.pdf">Download the PDF</a>.</p>
+  </object>
   </div>
 
 	<br>
