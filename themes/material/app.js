@@ -411,7 +411,6 @@ function file_pdf(path){
   });
 
   var content = `
-<div class="mdui-container-fluid">
 	<br>
   <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
 
@@ -424,7 +423,7 @@ function file_pdf(path){
 	  <label class="mdui-textfield-label">Download link</label>
 	  <input class="mdui-textfield-input" type="text" value="${dashurl}"/>
 	</div>
-</div>
+
 <a href="${dashurl}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
 	$('#content').html(content);
