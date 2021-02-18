@@ -365,11 +365,13 @@ function file_video(path){
 // file display Documents |pdf|
 function file_pdf(path){
   var url = window.location.origin + path;
-  var dashurl = encodeURI(url);
+  var tempurl = decodeURI(url)
+  tempurl = decodeURI(tempurl)
+  var dashurl = encodeURI(tempurl);
   var content = `
 <div class="mdui-container-fluid">
 	<br>
-  <iframe src="${url}" width="100%" height="800px">
+  <iframe src="${dashurl}" width="100%" height="800px">
       </iframe>
 	<br>
 	<!-Fixed label->
