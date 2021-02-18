@@ -373,22 +373,8 @@ function file_pdf(path){
 	<br>
 
   <div>
-    <object
-      data='${dashurl}'
-      type="application/pdf"
-      width="500"
-      height="678"
-    >
+  <embed src="${url}" type="application/pdf" width="100%" height="600px" />
 
-      <iframe
-        src='${dashurl}'
-        width="500"
-        height="678"
-      >
-      <p>This browser does not support PDF!</p>
-      </iframe>
-
-    </object>
   </div>
 
 	<br>
