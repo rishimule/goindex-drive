@@ -370,20 +370,9 @@ function file_pdf(path){
   var dashurl = encodeURI(tempurl);
   document.body.innerHTML = '';
   var content = `
-  <object
-    data="${dashurl}"
-    type="application/pdf"
-    width="100%"
-    height="100%">
-    <iframe
-      src="${dashurl}"
-      width="100%"
-      height="100%"
-      style="border: none;">
-      <p>Your browser does not support PDFs.
-        <a href="${dashurl}">Download the PDF</a>.</p>
-    </iframe>
-  </object>
+  <div class="container">
+  <embed src="${dashurl}#page=1" type="application/pdf" width="100%" height="100%">
+  </div>
 
   `;
 	document.body.innerHTML = content;
