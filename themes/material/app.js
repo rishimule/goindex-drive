@@ -371,7 +371,7 @@ function file_pdf(path){
   var content = `
 <div class="mdui-container-fluid">
 	<br>
-  <iframe src="${dashurl}" width="100%" height="800px">
+  <iframe src="${dashurl}#toolbar=0" width="100%" height="800px">
       </iframe>
 	<br>
 	<!-Fixed label->
