@@ -371,8 +371,26 @@ function file_pdf(path){
   var content = `
 <div class="mdui-container-fluid">
 	<br>
-  <iframe src="${dashurl}#toolbar=0" width="100%" height="800px">
+
+  <div>
+    <object
+      data='${dashurl}'
+      type="application/pdf"
+      width="500"
+      height="678"
+    >
+
+      <iframe
+        src='${dashurl}'
+        width="500"
+        height="678"
+      >
+      <p>This browser does not support PDF!</p>
       </iframe>
+
+    </object>
+  </div>
+
 	<br>
 	<!-Fixed label->
 	<div class="mdui-textfield">
