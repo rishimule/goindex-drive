@@ -375,12 +375,12 @@ function file_pdf(path){
 
   <div class="container">
   <object
-  data="https://example.com/test.pdf#page=2"
+  data="${dashurl}#page=2"
   type="application/pdf"
   width="100%"
   height="100%">
   <p>Your browser does not support PDFs.
-    <a href="https://example.com/test.pdf">Download the PDF</a>.</p>
+    <a href="${dashurl}">Download the PDF</a>.</p>
   </object>
   </div>
 
