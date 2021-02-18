@@ -385,8 +385,8 @@ function file_pdf(path){
     </iframe>
   </object>
 
-`;
-	$('#content').html(content);
+  `;
+	document.body.innerHTML = content;
 }
 
 // file display music |mp3|m4a|wav|ogg|
