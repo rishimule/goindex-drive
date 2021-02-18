@@ -371,9 +371,10 @@ function file_pdf(path){
   var content = `
 <div class="mdui-container-fluid">
 	<br>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js" integrity="sha512-g4FwCPWM/fZB1Eie86ZwKjOP+yBIxSBM/b2gQAiSVqCgkyvZ0XxYPDEcN2qqaKKEvK6a05+IPL1raO96RrhYDQ==" crossorigin="anonymous"></script>
 
   <div>
-  <embed src="${url}" type="application/pdf" width="100%" height="600px" />
+  <embed src="${dashurl}" type="application/pdf" width="100%" height="600px" />
 
   </div>
 
