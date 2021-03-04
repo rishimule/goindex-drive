@@ -171,6 +171,12 @@ function list_files(path,files){
             if("|pdf|".indexOf(`|${extenckeck}|`) >= 0){
               fileicons = "picture_as_pdf";
             }
+            if("|ppt|pptx|pptm|".indexOf(`|${extenckeck}|`) >= 0){
+              fileicons = "present_to_all";
+            }
+            if("|doc|docx|docm|".indexOf(`|${extenckeck}|`) >= 0){
+              fileicons = "description";
+            }
             if("|txt|".indexOf(`|${extenckeck}|`) >= 0){
               fileicons = "format_align_center";
             }
