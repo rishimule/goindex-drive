@@ -82,8 +82,8 @@ function nav(path) {
 
     html += `<div class="mdui-toolbar-spacer"></div>
       <a href="https://github.com/radonintro1234" target="_blank" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: 'Radon Gas'}">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36 36" enable-background="new 0 0 36 36" xml:space="preserve" class="mdui-icon" style="width: 24px;height:24px;">
-          <path fill-rule="evenodd" clip-rule="evenodd" fill="#000000" d="M0 167C0 259 75.7738 335 167.5 335C259.226 335 335 259 335 167C335 75 259.226 0 167.5 0C75.7738 0 0 75 0 167ZM229.315 245C190.432 221 140.58 215 82.753 228C68.7946 230 66.8006 210 78.7649 208C142.574 193 196.414 200 240.283 227C251.25 234 240.283 251 229.315 245ZM246.265 200C201.399 172 132.604 164 79.7619 180C62.8125 185 56.8304 159 72.7827 155C133.601 137 208.378 146 260.223 178C274.182 187 260.223 209 246.265 200ZM71.7857 129C54.8363 135 43.869 106 62.8125 99C121.637 81 221.339 84 283.155 121C300.104 130 284.152 158 266.205 148C212.366 116 122.634 113 71.7857 129Z"></path>
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 335 335" enable-background="new 0 0 36 36" xml:space="preserve" class="mdui-icon" style="width: 24px;height:24px;">
+          <path fill-rule="evenodd" clip-rule="evenodd" fill="black" d="M0 167C0 259 75.7738 335 167.5 335C259.226 335 335 259 335 167C335 75 259.226 0 167.5 0C75.7738 0 0 75 0 167ZM229.315 245C190.432 221 140.58 215 82.753 228C68.7946 230 66.8006 210 78.7649 208C142.574 193 196.414 200 240.283 227C251.25 234 240.283 251 229.315 245ZM246.265 200C201.399 172 132.604 164 79.7619 180C62.8125 185 56.8304 159 72.7827 155C133.601 137 208.378 146 260.223 178C274.182 187 260.223 209 246.265 200ZM71.7857 129C54.8363 135 43.869 106 62.8125 99C121.637 81 221.339 84 283.155 121C300.104 130 284.152 158 266.205 148C212.366 116 122.634 113 71.7857 129Z"></path>
         </svg>
       </a>`;
 
