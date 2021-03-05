@@ -75,11 +75,6 @@ function nav(path) {
       </svg>
       </a>`;
 
-
-
-
-
-
 	$('#nav').html(html);
 }
 
