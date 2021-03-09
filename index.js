@@ -8,12 +8,14 @@ var authConfig = {
     "theme" : "material", // material  classic
     "main_color": "blue-grey",
     "accent_color": "light-blue",
-    "logo": "spotify",
+    "logo": "spotify", // ['github', 'spotify', ]
+    "logo_link": "", //Keep blank to use default
+    "logo_text": "", //Keep blank to use default
     "dark_theme": true, //make sure you set main color
     "search": false,
     "client_id": "",
     "client_secret": "",
-    "refresh_token": "", // Authorization token. Can be found inside "..../user/.config/rclone.config"
+    "refresh_token": "", // Authorization token. Can be usually found inside "C:/Users/<userName>/.config/rclone/rclone.config"
     "root": "" // Root directory ID
   };
   var gd;
@@ -24,7 +26,7 @@ var authConfig = {
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
       <title>${authConfig.siteName}</title>
-      <script>var main_color = "${authConfig.main_color}";var logo = "${authConfig.logo}";var accent_color = "${authConfig.accent_color}";var dark = ${authConfig.dark_theme};var search = ${authConfig.search};</script>
+      <script>var main_color = "${authConfig.main_color}";var logo = "${authConfig.logo}";var logo_link = "${authConfig.logo_link}";var logo_text = "${authConfig.logo_text}";var accent_color = "${authConfig.accent_color}";var dark = ${authConfig.dark_theme};var search = ${authConfig.search};</script>
       <script src="//cdn.jsdelivr.net/combine/gh/jquery/jquery@3.2/dist/jquery.min.js,gh/radonintro1234/goindex-drive@${authConfig.version}/themes/${authConfig.theme}/app.js"></script>
   </head>
   <body>
