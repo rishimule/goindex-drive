@@ -449,10 +449,6 @@ function file_pdf(path){
   </div>
   <br>
   <br>
-  <div class="mdui-textfield">
-  	<label color="white">Open link</label>
-  	<input class="mdui-textfield-input" type="text" value="${open_pdf_path}"/>
-  </div>
   <br>
   <br>
   <div class="mdui-textfield">
