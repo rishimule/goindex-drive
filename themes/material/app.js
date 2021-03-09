@@ -418,11 +418,12 @@ function file_video(path){
 // file display Documents |pdf|
 function file_pdf(path){
   var url = window.location.origin + path;
-  var tempurl = decodeURI(url)
-  tempurl = decodeURI(tempurl)
+  var tempurl = decodeURI(url);
+  tempurl = decodeURI(tempurl);
   var dashurl = encodeURI(tempurl);
   var open_pdf_path = "https://docs.google.com/viewerng/viewer?url=" + dashurl;
   window.open(open_pdf_path);
+  window.open(window.location.origin,"_self");
 }
 
 // file display music |mp3|m4a|wav|ogg|
