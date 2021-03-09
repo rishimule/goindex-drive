@@ -432,6 +432,9 @@ function file_pdf(path){
   </div>
   <br>
   <br>
+  <iframe src="${open_pdf_path}" style="height:200px;width:300px;" title="Iframe Example"></iframe>
+  <br>
+  <br>
   <div class="mdui-textfield">
   	<label color="white">Open link</label>
   	<input class="mdui-textfield-input" type="text" value="${open_pdf_path}"/>
