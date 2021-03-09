@@ -440,11 +440,12 @@ function file_pdf(path){
     margin-right: auto;
   }
   </style>
-
+  <a href = "${open_pdf_path}">
     <svg class="svgcenter" width="200" height="200"
       xmlns="http://www.w3.org/2000/svg">
       <image  href="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" height="200" width="200"/>
     </svg>
+   <a>
 
   </div>
   <br>
