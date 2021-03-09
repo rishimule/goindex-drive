@@ -418,20 +418,42 @@ function file_video(path){
 // file display Documents |pdf|
 function file_pdf(path){
   var url = window.location.origin + path;
+  var name = path.split('/').pop();
   var tempurl = decodeURI(url);
   tempurl = decodeURI(tempurl);
   var dashurl = encodeURI(tempurl);
   var open_pdf_path = "https://docs.google.com/viewerng/viewer?url=" + dashurl;
   window.open(open_pdf_path);
+	var content = `
+  <div class="mdui-container-fluid">
+  	<br>
+    <h3 style="text-align:center">${name}</h3>
+    <br>
+  </div>
+  <br>
+  <br>
+  <div class="mdui-textfield">
+  	<label color="white">Open link</label>
+  	<input class="mdui-textfield-input" type="text" value="${open_pdf_path}"/>
+  </div>
+  <br>
+  <br>
+  <div class="mdui-textfield">
+  	<label class="mdui-textfield-label">Download link</label>
+  	<input class="mdui-textfield-input" type="text" value="${dashurl}"/>
+  </div>
+  <a href="${dashurl}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+    	`;
 
-  var str = dashurl;
-  var newstr = str.split('/');
-  var lenstrend = newstr[newstr.length - 1].length;
-  var folder_url = str.slice(0, -lenstrend);
+  $('#content').html(content);
 
+  // Reload the folder....
+  // var str = dashurl;
+  // var newstr = str.split('/');
+  // var lenstrend = newstr[newstr.length - 1].length;
+  // var folder_url = str.slice(0, -lenstrend);
+  // window.open(folder_url,"_self");
 
-
-  window.open(folder_url,"_self");
 }
 
 // file display music |mp3|m4a|wav|ogg|
