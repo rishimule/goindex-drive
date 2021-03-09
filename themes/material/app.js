@@ -423,15 +423,14 @@ function file_pdf(path){
   tempurl = decodeURI(tempurl);
   var dashurl = encodeURI(tempurl);
   var open_pdf_path = "https://docs.google.com/viewerng/viewer?url=" + dashurl;
-  window.open(open_pdf_path);
+  // window.open(open_pdf_path);
 	var content = `
   <div class="mdui-container-fluid">
   	<br>
     <h3 style="text-align:center">${name}</h3>
     <br>
   </div>
-  <br>
-  <br>
+
   <div class = "container">
   <style>
   .svgcenter {
@@ -457,7 +456,7 @@ function file_pdf(path){
   <br>
   <br>
   <div class="mdui-textfield">
-  	<label class="mdui-textfield-label">Download link</label>
+  	<label color="white">Download link</label>
   	<input class="mdui-textfield-input" type="text" value="${dashurl}"/>
   </div>
   <a href="${dashurl}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
