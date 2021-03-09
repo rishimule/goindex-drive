@@ -423,7 +423,15 @@ function file_pdf(path){
   var dashurl = encodeURI(tempurl);
   var open_pdf_path = "https://docs.google.com/viewerng/viewer?url=" + dashurl;
   window.open(open_pdf_path);
-  window.open(window.location.origin,"_self");
+
+  var str = dashurl;
+  var newstr = str.split('/');
+  var lenstrend = newstr[newstr.length - 1].length;
+  var folder_url = str.slice(0, -lenstrend);
+
+
+
+  window.open(folder_url,"_self");
 }
 
 // file display music |mp3|m4a|wav|ogg|
