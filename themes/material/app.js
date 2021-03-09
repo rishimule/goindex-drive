@@ -433,9 +433,9 @@ function file_pdf(path){
   <br>
   <br>
   <div class = "container">
-  <div class="jumbotron">
+
   <iframe src="${open_pdf_path}" style="height:200px;width:100%;" title="Iframe Example"></iframe>
-  </div>
+
   </div>
   <br>
   <br>
