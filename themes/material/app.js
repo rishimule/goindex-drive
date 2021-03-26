@@ -96,11 +96,11 @@ function nav(path) {
 
   else if (logo === 'spotify') {
 
-    if (logo_link === "" || logo_link === undefined) {
+    if (logo_link === "" || logo_link === "undefined") {
       logo_link = "https://open.spotify.com/playlist/300LpLFtocQtAfbSBVi7r5?si=yawnBRyTR-WOjk7lMQ-8KA";
     }
 
-    if (logo_text === "" || logo_text === undefined) {
+    if (logo_text === "" || logo_text === "undefined") {
       logo_text = "SimDzaDream";
     }
 
