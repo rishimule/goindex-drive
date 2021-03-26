@@ -1,13 +1,14 @@
 var authConfig = {
     "siteName": "The Noble Prince", // Site Name
     // "version" : "c6d521b", // version
-    "version" : "fd0b764895f57ef2f4dec0320889de9a27f70481",
+    "version" : "latest",
     "basic_auth": false, // change to Basic authentication
     "user": "",
     "pass": "",
     "theme" : "material", // material  classic
     "main_color": "blue-grey",
     "accent_color": "light-blue",
+    "favicon_path": "https://raw.githubusercontent.com/radonintro1234/goindex-drive/2.4/themes/material/Images/favicon.png",
     "logo": "spotify", // ['github', 'spotify', ]
     "logo_link": "", //Keep blank to use default
     "logo_text": "", //Keep blank to use default
@@ -26,6 +27,7 @@ var authConfig = {
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
       <title>${authConfig.siteName}</title>
+      <link rel="shortcut icon" type="image/png" href="${authConfig.favicon_path}"/>
       <script>var main_color = "${authConfig.main_color}";var logo = "${authConfig.logo}";var logo_link = "${authConfig.logo_link}";var logo_text = "${authConfig.logo_text}";var accent_color = "${authConfig.accent_color}";var dark = ${authConfig.dark_theme};var search = ${authConfig.search};</script>
       <script src="//cdn.jsdelivr.net/combine/gh/jquery/jquery@3.2/dist/jquery.min.js,gh/radonintro1234/goindex-drive@${authConfig.version}/themes/${authConfig.theme}/app.js"></script>
   </head>
