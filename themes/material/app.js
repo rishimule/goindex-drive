@@ -73,11 +73,11 @@ function nav(path) {
 
   if (logo === 'github') {
 
-    if (logo_link === "" || logo_link === undefined) {
+    if (logo_link === "" || logo_link === "undefined") {
       logo_link = "https://github.com/radonintro1234";
     }
 
-    if (logo_text === "" || logo_text === undefined) {
+    if (logo_text === "" || logo_text === "undefined") {
       logo_text = "Radon Gas";
     }
 
